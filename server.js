@@ -20,8 +20,16 @@ app.get('/', (req, res) => {
   // Breads
   const breadsController = require('./controllers/breads_controller.js')
   app.use('/breads', breadsController)
-  
 
+  // MIDDLEWARE
+app.use(express.static('public'))
+
+// 404 Page
+app.get('*', (req, res) => {
+  res.send('404')
+})
+
+  
 // LISTEN
 app.listen(PORT, () => {
   console.log('listening on port', PORT);
