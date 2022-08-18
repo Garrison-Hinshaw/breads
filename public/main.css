@@ -1,7 +1,12 @@
 body {
     background-color: floralwhite;
+    text-align: center;
   }
-  
+  #breadList {
+    text-align: left;
+    color: rgb(84, 194, 214);
+    
+  }
   img {
     width: 50%;
     display: block;

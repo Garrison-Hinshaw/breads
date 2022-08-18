@@ -7,7 +7,7 @@ function Index ({breads, title})  {
         <h2>Index Page</h2>
         {/* <p>I have {breads[0].name} bread!</p> */}
         {/* This is a JSX comment. */}
-        <ul>
+        <ul id="breadList">
         {
   breads.map((bread, index)=> {
     return (
