@@ -1,6 +1,9 @@
 // DEPENDENCIES
 const express = require('express')
 const mongoose = require('mongoose')
+// DEPENDENCIES
+const methodOverride = require('method-override')
+
 
 // CONFIGURATION
 require('dotenv').config()
@@ -15,6 +18,8 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+// MIDDLEWARE
+app.use(methodOverride('_method'))
 
 
 // ROUTES
